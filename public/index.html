@@ -1,0 +1,88 @@
+<html>
+	<head>
+		<title>Vet Admin</title>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+		<script src="client.js"></script>
+		<style>
+			body {margin-top:20px;}
+			.addPetBtn, .addOwnerBtn {margin-top:30px;}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+
+			<!-- Add a Owner -->
+			<div class="card">
+				<div class="card-body">
+					<h2 class="card-title">Add a Owner</h2>
+					<div class="row">
+						<div class="col-4">
+							<label>Name</label>
+							<input class="form-control" name="ownerName" placeholder="Owner Name">
+						</div>
+						<div class="col-3">
+							<label>Phone</label>
+							<input class="form-control" name="ownerPhone" placeholder="Owner Phone">
+						</div>
+						<div class="col-3">
+								<label>Email</label>
+								<input class="form-control" name="ownerEmail" placeholder="Owner Email">
+							</div>
+						<div class="col-2">
+							<button class="btn btn-primary addOwnerBtn" disabled>Add Owner</button>
+						</div>
+					</div>
+				</div>
+			</div>
+	
+			<!-- Add a Pet -->
+			<div class="card mt-4">
+				<div class="card-body">
+					<h2 class="card-title">Add a Pet</h2>
+					<div class="row">
+						<div class="col-3">
+							<label>Name</label>
+							<input class="form-control" name="petName" placeholder="Pet Name">
+						</div>
+						<div class="col-2">
+							<label>Type</label>
+							<select class="form-control" name="petType">
+								<option value="Dog">Dog</option>
+								<option value="Cat">Cat</option>
+							</select>
+						</div>
+						<div class="col-3">
+							<label>Owner</label>
+							<select class="form-control" name="petOwner"></select>
+						</div>
+						<div class="col-2">
+							<label>Age</label>
+							<input type="number" class="form-control" name="petAge" placeholder="Years old" min="0">
+						</div>
+						<div class="col-2">
+							<button class="btn btn-primary addPetBtn" disabled>Add Pet</button>
+						</div>
+					</div>
+				</div>
+			</div>
+	
+
+			<!-- Display Pets -->
+			<div class="card mt-4">
+				<div class="card-body">
+					<h2 class="card-title">Pets</h2>
+					<table class="table">
+						<thead>
+							<th>Name</th>
+							<th>Type</th>
+							<th>Owner</th>
+							<th>Age</th>
+						</thead>
+						<tbody></tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
